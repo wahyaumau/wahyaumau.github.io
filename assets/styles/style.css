@@ -1,0 +1,419 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+html{
+   scroll-behavior: smooth;
+   scroll-padding-top: 59px;
+}
+
+*{
+   padding: 0;
+   margin: 0; 
+   box-sizing: border-box;     
+}
+
+body{
+   font-family: 'Montserrat', sans-serif;
+}
+
+/* Navbar */
+nav {
+   position: fixed;
+   width: 100%;
+   top: 0;
+   z-index: 10;
+}
+
+nav ul {
+   list-style: none;
+   overflow: hidden;
+   text-align: center;
+   transition: 0.75s;   
+}
+
+nav ul li {
+   display: inline-block;
+   padding: 20px 30px;
+}
+
+nav ul li a {
+   text-decoration: none;
+   color: #fff;
+   font-size: 16px;
+}
+
+.hamburger-icon {
+   width: 100%;
+   text-align: right;
+   padding: 15px 25px;
+   cursor: pointer;
+   color: #fff;
+   display: none;
+}
+
+/* Global Section */
+.container{
+   width: 100%;
+   overflow: auto;
+}
+.container-light{            
+   background: #afa58e;
+}
+.container-dark{
+   background: #292d32;
+}
+.section-title{
+   margin: 20px auto;
+   text-align: center;
+}
+.section-title-light{            
+   color: white;
+}        
+.section-title-dark{            
+   color: #292d32;
+}  
+
+/* Home */
+.banner{     
+   display: flex;
+   align-items: center;
+   justify-content: center; 
+   text-align: center;
+   height: 100vh;
+   font-size: 48px;
+   color: white;
+   background: linear-gradient(rgba(16, 20, 61, 0.8), rgba(9, 4, 31, 0.8)), url(../images/banner.jpg);   
+   background-position: center bottom;
+   background-repeat: no-repeat;
+   background-size: cover;
+}
+
+/* About */
+#about .flex-container{
+   width: 70%;
+   margin: 20px auto;
+   display: flex;
+   background: #292d32;
+   border-radius: 20px;
+}
+#about .photo-container, #about .description-container{
+   flex: 1;
+}
+
+#about .photo-container img{
+   width: 100%;
+   height: 100%;
+   border-radius: 20px 0 0 20px;
+}                        
+
+#about .description-container > *{
+   margin: 10px 30px;
+   text-align: justify;
+   color: white;
+}
+#about .description-container h3{
+   display: inline-block;
+   border-bottom: 3px solid #afa58e;
+   padding-bottom: 8px;
+}
+
+#about .description-container a{
+   display: inline-block;
+   padding: 10px;
+   background: #afa58e;
+   border-radius: 5px;
+   text-decoration: none;
+   color: white;
+}
+
+/* Education */
+.timeline {
+   position: relative;
+   width: 80%;
+   margin: 0 auto;
+}
+
+.timeline::after {
+   content: '';
+   position: absolute;
+   width: 6px;
+   background-color: #afa58e;
+   top: 0;
+   bottom: 0;
+   left: 50%;
+   margin-left: -3px;
+}
+
+.content-container {
+   padding: 10px 40px;
+   position: relative;
+   background-color: inherit;
+   width: 50%;
+}
+
+.content-container::after {
+   content: '';
+   position: absolute;
+   width: 25px;
+   height: 25px;
+   right: -17px;
+   background-color: white;
+   border: 4px solid #afa58e;
+   top: 15px;
+   border-radius: 50%;
+   z-index: 1;
+}
+
+.left {
+   left: 0;
+}
+
+.right {
+   left: 50%;
+}
+
+.right::after {
+   left: -16px;
+}
+
+.content {
+   padding: 20px 30px;
+   background-color: white;
+   position: relative;
+   border-radius: 6px;
+}
+
+.content > *{
+   margin: 15px 0;
+}
+
+/* Skill */
+#skill .flex-container{
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+}
+
+#skill .card-container {
+   width: 25%;
+   padding: 20px;
+   margin: 20px;
+   background: #292d32;
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.7);
+   border-radius: 10px;
+}
+
+#skill .card-container img{            
+   display: block;
+   margin: auto;
+   width: 80%;
+   margin-bottom: 15px;            
+}
+.skill-bar {               
+   margin: auto; 
+   background: rgb(231, 231, 231);
+   border-radius: 6px;                                        
+}
+.skill-percentage {
+   text-align: center;
+   font-weight: bolder;
+   padding: 3px 0;
+   color: white;
+   border-radius: 6px;
+}        
+.java {
+   background-color: #db380e;
+}
+.python {
+   background-color: #ffd43b;
+}
+.php {
+   background-color: #6e81b6;
+}
+.spring {
+   background-color: #5fb832;
+}
+.flask {
+   background-color: black;
+}
+.laravel {
+   background-color: #ff2d20;
+}
+.android {
+   background-color: #a4c639;
+}
+
+/* Portfolio */
+#portfolio .flex-container{                        
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+}
+#portfolio .card-container{
+   width: 60%;
+   padding: 20px;
+   margin: 20px;
+   background: #afa58e;
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.7);
+   border-radius: 10px;
+}
+
+#portfolio .card-container img{            
+   display: block;
+   width: 100%;
+   margin: 15px auto;
+}
+#portfolio .card-container h2{
+   text-align: center;
+}
+.tech-stack-title{
+   display: inline-block;
+}
+.tech-stack{
+   display: inline-block;
+   margin-top: 5px;
+   padding: 5px;
+   background:  #292d32;
+   color: white;
+   border-radius: 5px;
+}  
+
+/* Aside */
+aside{
+   width: 100%;            
+   background: #afa58e;
+   overflow: auto;
+   color: white;
+}
+aside article{
+   margin: 20px auto;
+   width: 40%;
+   padding: 20px;
+   background: #292d32;
+   border-radius: 20px;
+   align-items: center;
+   display: flex;
+   flex-direction: column;
+}
+aside h2, aside h3{
+   text-align: center;
+}
+aside img{
+   margin: auto;
+   display: block;
+   width: 40%;
+}        
+aside tr{
+   text-align: left;
+}
+
+/* Footer */
+footer{
+   padding: 20px;
+   background-color: #292d32;            
+   text-align: center;
+}
+
+footer p{
+   color: white;
+   text-align: center;
+   font-weight: bold;
+   font-size: 16px;
+}        
+
+.social-container{
+   margin: 10px;
+}
+
+.social-container a{
+   color: white;
+   text-decoration: none;
+   margin: 5px;
+}
+
+.social-container a:hover{
+   color: #afa58e;
+}
+
+
+/* Float for main-content and aside */
+
+/* #main-content {
+   float: left;
+   width: 75%;
+}
+
+aside {
+   float: right;
+   width: 25%;
+   padding-left: 20px;
+}
+
+aside article{
+   width: 100%;
+} */
+
+main {
+   overflow: auto;
+}
+
+
+
+/* Responsive */
+@media(max-width: 786px) {   
+   /* Navbar */
+   nav ul {
+      max-height: 0px;
+   }
+
+   .show {
+      max-height: 40vh;
+   }
+
+   nav ul li {
+      width: 100%;
+      padding: 10px;
+   }
+
+   .hamburger-icon {
+      display: block;
+   }
+
+   /* About */
+   #about .flex-container{
+      flex-direction: column;
+   }
+   #about .photo-container img, #about .photo-container{                
+      border-radius: 20px 20px 0 0;
+   }            
+
+   /* Education */
+   .timeline::after {
+      left: 31px;
+  }
+  
+  .content-container {
+      width: 100%;
+      padding-left: 70px;
+      padding-right: 25px;
+  }        
+
+  .left::after, .right::after {
+      left: 15px;
+  }
+  
+  .right {
+      left: 0%;
+  }
+
+  /* Skill */
+  #skill .card-container{
+   width: 40%;
+   }
+
+   /* Aside */
+   aside article{      
+      width: 80%;
+   }
+}
+
+
