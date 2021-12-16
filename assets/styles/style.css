@@ -56,7 +56,7 @@ nav ul li a {
   overflow: auto;
 }
 .container-light {
-  background: #afa58e;
+  background: #ffffff;
 }
 .container-dark {
   background: #292d32;
@@ -81,9 +81,9 @@ nav ul li a {
   height: 100vh;
   font-size: 48px;
   color: white;
-  background: linear-gradient(rgba(16, 20, 61, 0.8), rgba(9, 4, 31, 0.8)),
+  background: linear-gradient(rgba(0, 2, 26, 0.8), rgba(4, 2, 10, 0.8)),
     url(../images/banner.jpg);
-  background-position: center bottom;
+  background-position: center top;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -112,11 +112,11 @@ nav ul li a {
   text-align: justify;
   color: white;
 }
-#about .description-container h3 {
+/* #about .description-container h3 {
   display: inline-block;
   border-bottom: 3px solid #afa58e;
   padding-bottom: 8px;
-}
+} */
 
 #about .description-container a {
   display: inline-block;
@@ -196,7 +196,7 @@ nav ul li a {
 }
 
 #skill .card-container {
-  width: 25%;
+  width: 10%;
   padding: 20px;
   margin: 20px;
   background: #292d32;
@@ -207,7 +207,7 @@ nav ul li a {
 #skill .card-container img {
   display: block;
   margin: auto;
-  width: 80%;
+  width: 100%;
   margin-bottom: 15px;
 }
 .skill-bar {
@@ -244,6 +244,22 @@ nav ul li a {
   background-color: #a4c639;
 }
 
+/* Education */
+#education .flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#education .card-container {
+  width: 60%;
+  padding: 20px;
+  margin: 20px;
+  background: #ffffff;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+}
+
 /* Portfolio */
 #portfolio .flex-container {
   display: flex;
@@ -254,7 +270,7 @@ nav ul li a {
   width: 60%;
   padding: 20px;
   margin: 20px;
-  background: #afa58e;
+  background: #ffffff;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.7);
   border-radius: 10px;
 }
@@ -359,6 +375,16 @@ main {
 }
 
 /* Responsive */
+@media (max-width: 1000px) {
+  /* About */
+  #about .flex-container {
+    flex-direction: column;
+  }
+  #about .photo-container img,
+  #about .photo-container {
+    border-radius: 20px 20px 0 0;
+  }
+}
 @media (max-width: 786px) {
   /* Navbar */
   nav ul {
@@ -366,7 +392,7 @@ main {
   }
 
   .show {
-    max-height: 40vh;
+    max-height: 50vh;
   }
 
   nav ul li {
@@ -409,7 +435,7 @@ main {
 
   /* Skill */
   #skill .card-container {
-    width: 40%;
+    width: 30%;
   }
 
   /* Aside */
