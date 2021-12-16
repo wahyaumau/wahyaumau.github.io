@@ -442,4 +442,7 @@ main {
   aside article {
     width: 80%;
   }
+  #portfolio .card-container {
+    width: 100%;
+  }
 }
