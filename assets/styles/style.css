@@ -442,6 +442,11 @@ main {
   aside article {
     width: 80%;
   }
+
+  #education .card-container {
+    width: 100%;
+  }
+
   #portfolio .card-container {
     width: 100%;
   }
